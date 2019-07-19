@@ -1,0 +1,222 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<%@ Register Src="~/WebUserControl.ascx" TagPrefix="uc1" TagName="WebUserControl" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<link href='https://fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'/>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+    <title><asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder></title>
+    
+</head>
+<body><!-- body-top -->
+	<div class="body-top">
+		<div class="container">
+			<div class="body-top-left">
+				<p>云梦科技 为你展示梦幻未来</p>
+                <uc1:WebUserControl runat="server" ID="WebUserControl" />
+			</div>
+			<div class="body-top-right">
+				<div class="social">
+					<ul>
+						<li><a href="#" class="link facebook"><span></span></a></li>
+						<li><a href="#" class="link twitter"><span></span></a></li>
+						<li><a href="#" class="link google-plus"><span></span></a></li>
+						<li><a href="#" class="link dribble"><span></span></a></li>
+                        
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //body-top -->
+<!-- body-content -->
+	<div class="body-content">
+		<div class="container">
+			<!-- header -->
+				<div class="logo-search">
+					<div class="logo">
+						<h1><a href="Home.aspx">云梦科技<i>科技未来</i></a></h1>
+					</div>
+					<div class="search">
+						<form>
+							<input type="text" value="请在这里搜索..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请在这里搜索...';}" required=""/>
+							<input type="submit" value=" " />
+						</form>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			<!-- //header -->
+			<!-- nav -->
+				<div class="navigation">
+					<nav class="navbar navbar-default">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">导航</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+							<nav class="cl-effect-20" id="cl-effect-20">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="Home.aspx"><span data-hover="首页">首页</span></a></li>
+									<li><a href="Military.aspx"><span data-hover="军事">军事</span></a></li>
+									<li><a href="Agriculture.aspx"><span data-hover="农业">农业</span></a></li>
+									<li><a href="Aviation.aspx"><span data-hover="航空">航空</span></a></li>
+									<li><a href="Computer.aspx"><span data-hover="计算机">计算机</span></a></li>
+									<li><a href="Construction.aspx"><span data-hover="建筑">建筑</span></a></li>
+                                    <li><a href="Education.aspx"><span data-hover="教育">教育</span></a></li>
+                                    <li><a href="Live.aspx"><span data-hover="生活">生活</span></a></li>
+                                    <li><a href="Medical.aspx"><span data-hover="医学">医学</span></a></li>
+                                    <li><a href="About us.aspx"><span data-hover="关于我们">关于我们</span></a></li>
+								</ul>
+							</nav>
+						</div>
+						<!-- /.navbar-collapse -->
+					</nav>
+				</div>
+			<!-- //nav -->
+			<!-- banner -->
+				<asp:ContentPlaceHolder id="ContentPlaceHolderBarner" runat="server">
+        
+            </asp:ContentPlaceHolder>
+			<!-- //banner -->
+		</div>
+	</div>
+<!-- //body-content -->
+<!-- single -->	
+	<div class="single">
+		<div class="container">
+			<div class="single-info">
+				<h3><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></h3>
+				<div class="comments">
+					<ul>
+						<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>星野智久</a> /</li>
+						<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>8 条</a> /</li>
+						<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2018年 5月 31日</li>
+					</ul>
+				</div>
+				<div class="dummy-text">
+					<p><asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder> 
+						<span><asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder></span></p>
+					<div class="dummy-text-grids">
+						<div class="col-md-5 dummy-text-grid-left">
+							<asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server"></asp:ContentPlaceHolder>
+						</div>
+						<div class="col-md-7 dummy-text-grid-left">
+							<p><asp:ContentPlaceHolder id="ContentPlaceHolder5" runat="server"></asp:ContentPlaceHolder></p>
+							<h4><asp:ContentPlaceHolder id="ContentPlaceHolder6" runat="server"></asp:ContentPlaceHolder></h4>
+						</div>
+						<div class="clearfix"> </div>
+						<p class="anyone"><asp:ContentPlaceHolder id="ContentPlaceHolder7" runat="server"></asp:ContentPlaceHolder></p>
+						<div class="col-md-7 dummy-text-grid-left">
+							<p><asp:ContentPlaceHolder id="ContentPlaceHolder8" runat="server"></asp:ContentPlaceHolder></p>
+							<h4><asp:ContentPlaceHolder id="ContentPlaceHolder9" runat="server"></asp:ContentPlaceHolder></h4>
+						</div>
+						<div class="col-md-5 dummy-text-grid-left great">
+							<asp:ContentPlaceHolder id="ContentPlaceHolder10" runat="server"></asp:ContentPlaceHolder>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="recent-com">	
+				</div>
+				<div class="leave-comm">
+					<h4>留下<span>你的联系方式</span></h4>
+					<div class="leave-comm-grids">
+						<form>
+							<input type="text" value="姓名..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '姓名...';}" required=""/>
+							<input type="email" value="邮箱..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱...';}" required=""/>
+							<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">你想告诉我们的...</textarea>
+							<input type="submit" value="提交" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //single -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grid">
+				<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+				<h3><span>联系我们</span> 请给我们你的联系方式</h3>
+				<form>
+					<input type="email" value="输入你的联系方式" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入你的联系方式';}" required=""/>
+					<input type="submit" value="提交 " />
+				</form>
+			</div>
+			<div class="footer-grid-logo">
+				<h2><a href="Home.aspx"><span></span>云梦科技<i>科技未来</i></a></h2>
+				<p>云梦科技 为你展示梦幻未来</p>
+				<div class="social">
+					<ul>
+						<li><a href="#" class="link facebook"><span></span></a></li>
+						<li><a href="#" class="link twitter"><span></span></a></li>
+						<li><a href="#" class="link google-plus"><span></span></a></li>
+						<li><a href="#" class="link dribble"><span></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+   
+    
+</body>
+</html>
